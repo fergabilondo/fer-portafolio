@@ -1,0 +1,75 @@
+/* Tipografía */
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Noto+Serif&display=swap");
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  /* Colores */
+  --primario: #141414;
+  --primario-2: #333333;
+  --primario-3: #707070;
+  --secundario-1: #ff0000;
+  --secundario-2: #d80000;
+  --secundario-3: #ff3838;
+  --secundario-4: #ff4f4f;
+  --secundario-5: #ff6868;
+  --brand-uno-1: #141414;
+  --brand-uno-2: #ffe3b8;
+  --brand-uno-3: #fdeacd;
+  --blancoClaro: #f5f5f5;
+  --blanco: #ffffff;
+  /* Tipografia */
+  --font-family: "Noto Serif", serif;
+  --font-family-headings: "Manrope", sans-serif;
+  --h1: 32px;
+  --h2: 27px;
+  --h3: 23px;
+  --h4: 21px;
+  --h5: 19px;
+  /* Intención de los colores */
+}
+
+/* Commit: variables colores */
+
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-headings);
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+/****************************************
+*    Componentes
+*****************************************/
