@@ -1,5 +1,6 @@
 /* Tipografía */
 @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
 /****************************************
 *    Variables
 *****************************************/
@@ -14,13 +15,15 @@
   --secundario-4: #ff4f4f;
   --secundario-5: #ff6868;
   --brand-uno-1: #141414;
-  --brand-uno-2: #ffe3b8;
-  --brand-uno-3: #fdeacd;
-  --blancoClaro: #f5f5f5;
+  --brand-uno-2: #f5f4e3;
+  --brand-uno-3: #f8f6d6;
   --blanco: #ffffff;
+  /* Intencion de colores */
+  --color-titulo: var(--brand-uno-1);
   /* Tipografia */
-  --font-family: "Noto Serif", serif;
-  --font-family-headings: "Manrope", sans-serif;
+  --font-family: "Manrope", serif;
+  --font-family-headings: "Tangerine", sans-serif;
+
   --h1: 32px;
   --h2: 27px;
   --h3: 23px;
@@ -52,6 +55,9 @@ h5 {
 
 h1 {
   font-size: var(--h1);
+  color: var(--color-titulo);
+  font-size: 120px;
+  line-height: 150px;
 }
 
 h2 {
@@ -73,3 +79,28 @@ h5 {
 /****************************************
 *    Componentes
 *****************************************/
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--brand-uno-2);
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 103px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul *:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+nav ul *:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
