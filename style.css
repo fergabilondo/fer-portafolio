@@ -21,7 +21,7 @@
   /* Intencion de colores */
   --color-titulo: var(--brand-uno-1);
   /* Tipografia */
-  --font-family: "Manrope", serif;
+  --font-family: "Noto-Serif", serif;
   --font-family-headings: "Tangerine", sans-serif;
 
   --h1: 32px;
