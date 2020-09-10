@@ -136,4 +136,16 @@ a {
 .menu__link {
   font-size: 50px;
   color: var(--color--link);
+  transition: all 400ms ease-in-out;
 }
+
+.menu__link:hover {
+  color: red;
+  font-family: Tangerine;
+}
+
+/* 
+.menu__link:hover {
+  color: blue;
+}
+*/
