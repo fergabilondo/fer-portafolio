@@ -87,7 +87,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--brand-uno-2);
+  background: (--blanco);
 }
 
 .header__nombre {
@@ -106,7 +106,6 @@ a {
 
 .menu__item {
   list-style-type: none;
-  background: var(--brand-uno-2);
   align-self: center;
 }
 
@@ -141,7 +140,7 @@ a {
 
 .menu__link:hover {
   color: red;
-  font-family: Tangerine;
+  /* font-family: Tangerine; */
 }
 
 /* 
