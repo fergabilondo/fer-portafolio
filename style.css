@@ -84,10 +84,18 @@ a {
 *    Componentes
 *****************************************/
 .home {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: (--blanco);
+}
+
+.home::before {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  content: url(./assets/imagenes/estrellita.svg);
 }
 
 .header__nombre {
