@@ -163,3 +163,11 @@ a {
   --blanco: #333333;
   background: var(--blanco);
 }
+
+/* Proyectos */
+.proyectos {
+  height: 100%;
+  background: url(./assets/imagenes/bg-proyectos.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
