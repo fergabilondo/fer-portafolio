@@ -6,7 +6,7 @@
 *****************************************/
 :root {
   /* Colores */
-  --primario: #141414;
+  --primario: #0f0f0f;
   --primario-2: #333333;
   --primario-3: #707070;
   --secundario-1: #ff0000;
@@ -19,11 +19,11 @@
   --brand-uno-3: #f8f6d6;
   --blanco: #ffffff;
   /* Intencion de colores */
-  --color-titulo: var(--brand-uno-1);
-  --color--link: var(--primario-2);
+  --color-titulo: var(--blanco);
+  --color--link: var(--blanco);
   /* Tipografia */
   --font-family: "Manrope", serif;
-  --font-family-headings: "Tangerine", sans-serif;
+  /*--font-family-headings: "Tangerine", sans-serif;/*
   --h1: 32px;
   --h2: 27px;
   --h3: 23px;
@@ -56,7 +56,7 @@ h5 {
 h1 {
   font-size: var(--h1);
   color: var(--color-titulo);
-  font-size: 120px;
+  font-size: 80px;
   line-height: 150px;
 }
 
@@ -83,37 +83,43 @@ a {
 /****************************************
 *    Componentes
 *****************************************/
-.home,
-.about {
+.layout {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: (--blanco);
+  background: var(--primario);
 }
 
-.home::before {
+.layout::before {
   position: absolute;
   top: 50px;
   right: 50px;
   content: url(./assets/imagenes/estrellita.svg);
 }
 
-.header__nombre {
+.header {
   padding: 0 0 0 40px;
+  line-height: 1.3;
 }
 
-.header__nombre span {
-  font-size: 245px;
+.header span {
+  font-size: 80px;
+}
+
+.nav {
+  margin-bottom: 40px;
 }
 
 .menu {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 80px 80px 80px;
 }
 
 .menu__item {
+  line-height: 0.1;
   list-style-type: none;
   align-self: center;
 }
@@ -129,6 +135,28 @@ a {
   /* justify-self: center - centro  */
   /* justify-self: end - final */
   justify-self: center;
+}
+
+.uno,
+.dos {
+  width: 100%;
+}
+
+.dos {
+  position: relative;
+  text-align: right;
+}
+
+.uno::after {
+  color: white;
+  position: absolute;
+  content: url(./assets/imagenes/linea-larga.png);
+}
+
+.dos::before {
+  color: white;
+  position: absolute;
+  content: url(./assets/imagenes/linea-larga.png);
 }
 
 .menu *:nth-child(3) {
