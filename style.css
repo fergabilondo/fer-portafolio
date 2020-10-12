@@ -6,7 +6,7 @@
 *****************************************/
 :root {
   /* Colores */
-  --primario: #0f0f0f;
+  --primario: #000000;
   --primario-2: #333333;
   --primario-3: #707070;
   --secundario-1: #ff0000;
@@ -56,8 +56,8 @@ h5 {
 h1 {
   font-size: var(--h1);
   color: var(--color-titulo);
-  font-size: 80px;
-  line-height: 150px;
+  font-size: 60px;
+  line-height: 60px;
 }
 
 h2 {
@@ -95,7 +95,7 @@ a {
   position: absolute;
   top: 50px;
   right: 50px;
-  content: url(./assets/imagenes/estrellita.svg);
+  content: url(./assets/imagenes/estrella.svg);
 }
 
 .header {
@@ -104,7 +104,7 @@ a {
 }
 
 .header span {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .nav {
@@ -136,7 +136,7 @@ a {
   /* justify-self: end - final */
   justify-self: center;
 }
-
+/* 
 .uno,
 .dos {
   width: 100%;
@@ -150,24 +150,37 @@ a {
 .uno::after {
   color: white;
   position: absolute;
-  content: url(./assets/imagenes/linea-larga.png);
+  content: url(./assets/imagenes/linea-1.svg);
 }
 
 .dos::before {
   color: white;
   position: absolute;
-  content: url(./assets/imagenes/linea-larga.png);
+  content: url(./assets/imagenes/linea-2.svg);
+} */
+
+.menu__item {
+  position: relative;
+  width: 100%;
 }
 
-.menu *:nth-child(3) {
-  /* grid-column: 3/4; */
-  grid-row: 3/4;
-  /*justify-self: end; */
+.menu__item:nth-child(1)::after {
+  color: white;
+  position: absolute;
+  left: 220px;
+  content: url(./assets/imagenes/linea1.svg);
 }
 
-.menu__item:nth-child(odd) {
+.menu__item:nth-child(2)::after {
+  color: white;
+  position: absolute;
+  right: 250px;
+  content: url(./assets/imagenes/linea2.svg);
+}
+
+/* .menu__item:nth-child(odd) {
   padding: 50px;
-}
+} */
 
 .menu__link {
   font-size: 25px;
