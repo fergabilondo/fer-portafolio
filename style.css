@@ -93,7 +93,7 @@ a {
 
 .layout::before {
   position: absolute;
-  top: 50px;
+  top: 20px;
   right: 50px;
   content: url(./assets/imagenes/estrella.svg);
 }
@@ -159,8 +159,8 @@ a {
 }
 
 /* About me */
-.ABOUT {
-  --blanco: #333333;
+.about-contacto {
+  --blanco: #ffffff;
   background: var(--blanco);
 }
 
