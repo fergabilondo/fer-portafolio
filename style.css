@@ -171,3 +171,24 @@ a {
     fixed;
   background-size: cover;
 }
+
+.contacto {
+  color: black;
+}
+
+.contacto__titulo {
+  font-size: 20px;
+}
+
+.contacto__info {
+  color: black;
+  font-size: 20px;
+}
+
+.enlace-sociales {
+  color: black;
+}
+
+.footer {
+  color: black;
+}

@@ -3,6 +3,11 @@
 
 
 Octubre 12:
-1.Ya nomas tengo que trabajar en el link de proyectos, ajustar mi Layout para que quede
+1.Linkear PROYECTOS Y ABOUT/CONTACTO
+2.Ya nomas tengo que trabajar en proyectos, ajustar mi Layout para que quede
+
+REFERENCIAS: 
+https://johannhusser.com/our-only-true-life-is-in-the-future
+https://tmpl.studio/info
 
 
