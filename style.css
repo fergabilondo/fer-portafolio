@@ -109,6 +109,13 @@ a {
   content: url(./assets/imagenes/estrella.svg);
 }
 
+.estrella {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  content: url(./assets/imagenes/estrella.svg);
+}
+
 .header {
   padding: 0 0 0 40px;
   line-height: 1.3;
@@ -175,6 +182,35 @@ a {
   --color-titulo: #000000;
   background: var(--background);
 }
+.about-contacto .menu__item:nth-child(1)::after {
+  /* color: black; */
+  position: absolute;
+  left: 170px;
+  content: url(./assets/imagenes/linea-negra2.svg);
+}
+
+.about-contacto .menu__item:nth-child(2)::after {
+  /*  color: black; */
+  position: absolute;
+  right: 250px;
+  content: url(./assets/imagenes/linea-negra2.svg);
+}
+
+.about-contacto .layout::before {
+  /*  estrella negra; */
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  content: url("./assets/imagenes/estrella-negra.svg");
+}
+
+.proyectos .layout::before {
+  /*  estrella negra; */
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  content: url("./assets/imagenes/estrella-negra.svg");
+}
 
 /* .about-contacto .menu__link {
   --color-link: #000000;
@@ -203,45 +239,28 @@ a {
   content: url(./assets/imagenes/linea-negra2.svg);
 }
 
-/* .proyectos .menu__link {
-  --color-link: #000000;
-  color: var(--color--link);
-} */
-
-/* About me */
-/*
-.about-contacto {
-  --blanco: #ffffff;
-  background: var(--blanco);
-}
-*/
-/* Proyectos */
-/*
 .proyectos {
   height: 100%;
-  background: url(./assets/imagenes/bg-proyectos.jpg) no-repeat center center
-    fixed;
+  background: url(https://res.cloudinary.com/deqcjnsqd/image/upload/v1603906517/menonitas_djqyfb.jpg)
+    no-repeat center center fixed;
   background-size: cover;
 }
 
-.contacto {
-  color: black;
+/* xyz  */
+.about-contacto {
+  position: relative;
 }
 
-.contacto__titulo {
-  font-size: 20px;
+.about-contacto::after {
+  position: absolute;
+  content: url("./assets/imagenes/estrella-negra.svg");
+  top: 20px;
+  right: 50px;
 }
 
-.contacto__info {
-  color: black;
-  font-size: 20px;
+.proyectos::after {
+  position: absolute;
+  content: url("./assets/imagenes/estrella-negra.svg");
+  top: 20px;
+  right: 50px;
 }
-
-.enlace-sociales {
-  color: black;
-}
-
-.footer {
-  color: black;
-}
-*/
