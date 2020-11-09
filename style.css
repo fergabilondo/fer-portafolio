@@ -18,22 +18,18 @@
   --brand-uno-2: #f5f4e3;
   --brand-uno-3: #f8f6d6;
   --blanco: #ffffff;
-  --background: #000000;
-  /* Intencion de colores */
-  --color-titulo: #ffffff;
-  --color--link: #000000;
+  /* Theme modes */
+  --background: var(--primario);
+  --text: var(--blanco);
   /* Tipografia */
   --font-family: "Manrope", serif;
-  /*--font-family-headings: "Tangerine", sans-serif;/*
-  --h1: 32px;
+  /*--font-family-headings: "Tangerine", sans-serif;*/
+  --h1: 60px; /* Cambiamos el valor del h1 aquí */
   --h2: 27px;
   --h3: 23px;
   --h4: 21px;
   --h5: 19px;
-  /* Intención de los colores */
 }
-
-/* Commit: variables colores */
 
 /****************************************
 *    Base
@@ -45,6 +41,7 @@ html {
 body {
   font-family: var(--font-family);
   background: var(--background);
+  color: var(--text);
 }
 
 h1,
@@ -57,8 +54,6 @@ h5 {
 
 h1 {
   font-size: var(--h1);
-  color: var(--color-titulo);
-  font-size: 60px;
   line-height: 60px;
 }
 
@@ -79,96 +74,83 @@ h5 {
 }
 
 a {
+  color: var(--text);
   text-decoration: none;
-  color: var(--color-link);
+}
+
+/* Quitamos los bullets de cada menu item */
+ul li {
+  list-style-type: none;
 }
 
 /****************************************
 *    Componentes
 *****************************************/
 .layout {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.layout a {
-  --color-link: #ffffff;
-  color: var(--color-link);
-}
-
-/* .layout-inverted {
-  background: var(--blanco);
-} */
-
-.layout::before {
+/* Aplicamos el formato al svg que está inline en el header */
+.svg-estrella {
   position: absolute;
-  top: 20px;
+  top: 5px;
   right: 50px;
   content: url(./assets/imagenes/estrella.svg);
-}
-
-.estrella {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  content: url(./assets/imagenes/estrella.svg);
+  color: var(--text);
 }
 
 .header {
   padding: 0 0 0 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 6px;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0 0 6px; */
+}
+
+/*
+background-color: #FFFFFF;
+box-shadow: rgba(0, 0, 0, 0.25) 0 0 6px;
+color: #000000;
+cursor: -webkit-image-set(url(http://tmpl.studio/info/dot70.png) 1x, url(dot702x.png) 2x) 18 18, default;
+font-family: "Union Regular", Helvetica, sans-serif;
+font-size: 0;
+font-weight: 400;
+left: 0;
+letter-spacing: .01em;
+line-height: 17px;
+margin: 0;
+padding: 0 15px;
+position: fixed;
+text-decoration: none;
+text-transform: uppercase;
+top: 15px;
+width: calc(100% - 30px);
+z-index: 10;
+*/
+
+.header h1 {
   line-height: 1.3;
 }
 
-.header span {
-  font-size: 60px;
-}
-
 .nav {
-  height: 100px;
   width: 90vw;
+  /* Tercer valor indicaría margin bottom, por ejemplo:   margin: 0 auto 1em; */
   margin: 0 auto;
-  overflow: hidden;
 }
 
-.menu {
-  display: block;
-}
-
-.menu__item {
-  position: relative;
-  /* line-height: 0.1; */
-  list-style-type: none;
-  width: 100%;
-  /* border: 1px solid white; */
-}
-
-.menu__item:nth-child(2) {
-  text-align: right;
-}
-/*
+/* Simplificamos el formato del menu aplicando display flex al menu link, poniendo inline el svg para aplicar el efecto hover al enlace */
 .menu__link {
-  color: white;
-}
-*/
-.menu__item:nth-child(1)::after {
-  /* color: white; */
-  position: absolute;
-  left: 170px;
-  content: url(./assets/imagenes/linea-blanca2.svg);
-}
-
-.menu__item:nth-child(2)::after {
-  /*  color: white; */
-  position: absolute;
-  right: 250px;
-  content: url(./assets/imagenes/linea-blanca2.svg);
-}
-
-.menu__link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-size: 25px;
   transition: all 400ms ease-in-out;
+  overflow-x: hidden; /* Esto sirve para ocultar el overflow del svg */
+}
+
+.menu__item:nth-child(2) .menu__link {
+  /* Cambiamos el orden en el 2do */
+  flex-direction: row-reverse;
 }
 
 .menu__link:hover {
@@ -176,126 +158,46 @@ a {
 }
 
 /* About */
-.about-contacto {
-  --background: #ffffff;
-  --color-link: #000000;
-  --color-titulo: #000000;
-  background: var(--background);
-}
-.about-contacto .menu__item:nth-child(1)::after {
-  /* color: black; */
-  position: absolute;
-  left: 170px;
-  content: url(./assets/imagenes/linea-negra2.svg);
+/* Ultima actualización de la página de about donde solo implementabamos dark/light modes */
+/* Diff: https://github.com/fergabilondo/portafolio/commit/61086aa17922fdbd653a207ff2e38ce4d65dfc27#diff-b78be019f1dc6d57753ea900c3805b114cd53ab7c0db836cc081836df1b99b7a */
+/* Formato básico para centrar elementos y margin-top a enlaces sociales */
+.contacto {
+  width: 80vw;
+  margin: auto;
+  display: flex;
 }
 
-.about-contacto .menu__item:nth-child(2)::after {
-  /*  color: black; */
-  position: absolute;
-  right: 250px;
-  content: url(./assets/imagenes/linea-negra2.svg);
+.enlace-sociales {
+  margin-top: 2rem;
 }
-
-.about-contacto .layout::before {
-  /*  estrella negra; */
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  content: url("./assets/imagenes/estrella-negra.svg");
-}
-
-.proyectos .layout::before {
-  /*  estrella negra; */
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  content: url("./assets/imagenes/estrella-negra.svg");
-}
-
-/* .about-contacto .menu__link {
-  --color-link: #000000;
-  color: var(--color--link);
-} */
 
 /* Proyectos */
 .proyectos {
-  --background: #ffffff;
-  --color-link: #000000;
-  --color-titulo: #000000;
-  background: var(--background);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 90vw;
+  margin: 3rem auto;
 }
 
-.proyectos .menu__item:nth-child(1)::after {
-  /* color: black; */
-  position: absolute;
-  left: 170px;
-  content: url(./assets/imagenes/linea-negra2.svg);
+.proyectos > * {
+  flex-grow: 1;
+  flex-basis: calc((35rem - 100%) * 999);
 }
 
-.proyectos .menu__item:nth-child(2)::after {
-  /*  color: black; */
-  position: absolute;
-  right: 250px;
-  content: url(./assets/imagenes/linea-negra2.svg);
+/* Opcional margin top a la navegacion cuyo documento tenga elemento main */
+/* .main + .nav {
+ margin-top: 33vh;
+} */
+
+/* Aplicamos theme modes para simplificar el background & text dependiendo si tiene la clase dark o light */
+/* Theme modes */
+.dark {
+  --background: var(--primario);
+  --text: var(--blanco);
 }
 
-.proyectos {
-  height: 100%;
-  /* background: url(https://res.cloudinary.com/deqcjnsqd/image/upload/v1603906517/menonitas_djqyfb.jpg)
-    no-repeat center center fixed; */
-  /* background-size: cover; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+.light {
+  --background: var(--blanco);
+  --text: var(--primario);
 }
-
-.proyectos .main {
-  display: grid;
-  grid-template-columns: 1000px 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.proyectos .main .proyecto:nth-child(1) {
-  grid-row: 1/2;
-  grid-column: 2/3;
-}
-
-.proyectos .main .proyecto:nth-child(2) {
-  grid-row: 1/3;
-  grid-column: 1/2;
-}
-
-/* xyz  */
-.about-contacto {
-  position: relative;
-}
-
-.about-contacto::after {
-  position: absolute;
-  content: url("./assets/imagenes/estrella-negra.svg");
-  top: 20px;
-  right: 50px;
-}
-
-.proyectos::after {
-  position: absolute;
-  content: url("./assets/imagenes/estrella-negra.svg");
-  top: 20px;
-  right: 50px;
-}
-
-/*
-  Los pseudoselectores (pseudo-clases o pseudo-elementos) seleccionan a los elementos bajo determinadas circunstancias.
-
-  Pseudo-clases: Van a definir el estilo que vamos a dar al elemento cuando este esté en determinado estado.
-  Lista de pseudo-classes: https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
-
-  Sintaxis: a:hover { color: dimgray; }
-
-  Pseudo-elementos: Van a definir el estilo que vamos a dar a cierta parte del elemento sin tomar en cuenta su estado.
-  Lista de pseudo-elementos: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
-
-  Sintaxis: p::first-line { text-transform: uppercase; }
-
-  Documentación: https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos
-*/
