@@ -171,18 +171,18 @@ z-index: 10;
 }
 
 /* Proyectos */
-.proyectos div {
+.proyectos ul {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+  /* flex-wrap: wrap; */
+  /* flex-direction: row-reverse; */
   width: 90vw;
   margin: 3rem auto;
 }
 
-.proyectos div > * {
+/* .proyectos ul > * {
   flex-grow: 1;
   flex-basis: calc((35rem - 100%) * 999);
-}
+} */
 
 /* Opcional margin top a la navegacion cuyo documento tenga elemento main */
 /* .main + .nav {
