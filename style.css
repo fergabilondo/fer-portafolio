@@ -200,3 +200,12 @@ z-index: 10;
   --background: var(--blanco);
   --text: var(--primario);
 }
+
+/* Proyectos */
+.lista-proyectos > * {
+  margin-top: 110px;
+}
+
+.lista-proyectos li:nth-child(3n + 0) img {
+  margin-left: auto;
+}
