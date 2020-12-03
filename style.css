@@ -230,3 +230,58 @@ button {
   top: 0;
   left: 0;
 }
+
+.lista-proyectos li {
+  border: 2px solid hotpink;
+}
+
+.lista-proyectos li:hover {
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+}
+
+.lista-proyectos li::after {
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+  content: attr(data-nombre);
+  color: #000000;
+}
+
+/*
+.cartel__item {
+  position: relative;
+  margin: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+.cartel__item > * {
+  transition: all 0.4s ease-in-out;
+}
+.cartel__item:hover img {
+  filter: invert(20%);
+}
+.cartel__info {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+.cartel__info::after {
+  content: attr(data-year);
+  display: block;
+}
+.cartel__item:hover figcaption {
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+}*/
