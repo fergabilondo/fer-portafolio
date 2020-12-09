@@ -18,3 +18,7 @@ Octubre 28:
 En "about-contacto" se distorciono el footer y lo tengo que ajustar
 En la seccion de "poryectos" tengo que ajustar la imagen para que quede atras del titulo y el footer
 Tengo que cambiar la estrellita en "proyectos" y "about-contacto"
+
+Diciembre 3: 
+
+meter javas: en todas las secciones, transiciones
