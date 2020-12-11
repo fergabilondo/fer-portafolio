@@ -416,9 +416,9 @@ button {
   justify-content: flex-end;
 }
 
-.back-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 100;
+.menu .nav {
+  position: fixed;
+  bottom: 0;
+  left: 70px;
+  background: white;
 }
