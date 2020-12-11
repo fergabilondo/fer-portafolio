@@ -160,7 +160,7 @@ z-index: 10;
 }
 
 .menu__link:hover {
-  color: red;
+  color: white;
 }
 
 /* About */
@@ -288,7 +288,7 @@ button {
   /* border: 5px solid black; */
 }
 
-.lista-proyectos li::after {
+/* .lista-proyectos li::after {
   transition: var(--transition);
   display: none;
 }
@@ -303,7 +303,7 @@ button {
   content: attr(data-nombre);
   color: red;
   font-size: 25px;
-}
+} */
 
 .lista-proyectos li:hover::after {
   display: block;
@@ -345,9 +345,11 @@ button {
   position: relative;
   text-align: center;
   width: 100%;
+  margin-bottom: 10rem;
 }
 
 .hover-img * {
+  color: #fff;
   box-sizing: border-box;
   transition: all 0.7s ease;
 }
@@ -401,4 +403,22 @@ button {
 
 .hover-img:hover figcaption {
   opacity: 1;
+}
+
+/* Utilidades */
+.imagen-centro {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imagen-derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.back-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
